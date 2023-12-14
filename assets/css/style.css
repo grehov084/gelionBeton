@@ -97,3 +97,29 @@
 .site-header-contacts{
     height: 50px;
 }
+.site-main-content{
+    width: 100%;
+    border: 2px solid yellow;
+    margin-top: 100px;
+}
+.site-main-title{
+    color: #002D4D;
+    font-family: Bartina;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    border: 2px solid red;
+}
+.site-main-product{
+    width: 100%;
+    max-width: 1200px;
+    border: 2px solid red;  
+    min-height: 450px;
+    margin-top: 40px;
+}
+.about-content{
+    background: url("../../assets/img/aboutBG.jpg") no-repeat;
+    min-height: inherit;
+}
