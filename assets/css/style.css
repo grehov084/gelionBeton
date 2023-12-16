@@ -1,11 +1,20 @@
 @font-face {
-	font-family: 'Bartina';
+	font-family: 'BartinaBold';
 	src: url('../../assets/fonts/bartina-bold.eot'); /* IE 9 Compatibility Mode */
 	src: url('../../assets/fonts/bartina-bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
 		url('../../assets/fonts/bartina-bold.woff2') format('woff2'), /* Super Modern Browsers */
 		url('../../assets/fonts/bartina-bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
 		url('../../assets/fonts/bartina-bold.ttf') format('truetype'), /* Safari, Android, iOS */
 		url('../../assets/fonts/bartina-bold.svg#bartina-bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+@font-face {
+	font-family: 'Bartina-Light';
+	src: url('../fonts/bartina-light.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/bartina-light.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/bartina-light.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/bartina-light.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/bartina-light.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/bartina-light.svg#bartina-light') format('svg'); /* Chrome < 4, Legacy iOS */
 }
 * {
     box-sizing: border-box;
@@ -18,7 +27,6 @@
 .container{
     width: 100%;
     max-width: 1440px;
-    border: 1px solid yellow;
     margin: 0 auto;
     min-height: inherit;
     z-index: 1;
@@ -27,19 +35,21 @@
 .site{
     width: 100%;
     margin: 0 auto;
-    font-family: 'Bartina';
+    font-family: 'Bartina Bold';
 }
 .site-header__text{
     text-transform: uppercase;
     color: #fff;
     font-size: 30px;
     margin-left: 19px;
+    font-family: "BartinaBold";
 }
 .site-header-contacts__link{
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
     font-size: 40px;
+    font-family: "BartinaBold";
 }
 .site-header-top{
     display: flex;
@@ -83,7 +93,7 @@
     background-size: cover;
 }
 .site-header-description{
-    max-width: 825px;
+    max-width: 1090px;
     height: 550px;
     border: 2px solid red;
     position: relative;
@@ -100,27 +110,50 @@
 }
 .site-main-content{
     width: 100%;
-    border: 2px solid yellow;
 }
 .site-main__content{
     margin-top: 100px;
 }
 .site-main-title{
     color: #002D4D;
-    font-family: Bartina;
+    font-family: "BartinaBold";
     font-size: 60px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-    border: 2px solid red;
 }
 .site-main__product{
+    font-family: "BertinaNormal";
     width: 100%;
-    max-width: 1440px;
-    border: 2px solid red;  
+    max-width: 1440px; 
     min-height: 450px;
     margin-top: 40px;
+    background-color: #002D4D;
+    padding-left: 100px;
+}  
+.product__title{
+    color: #FFF;
+    font-family: "BartinaBold";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 36px;
+} 
+.product-container{
+    position: relative;
+    top: 181px;
+}
+.product__description{
+    color: #FFF;
+	font-family: 'Bartina-Light';
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
 }
 .site-main-about{
     min-height: 424px;
@@ -131,6 +164,7 @@
     background-size: cover;
 }
 .about__title, .contacts-info__title, .map__title{
+    font-family: "BartinaBold";
     color: #FFF;
     font-size: 60px;
     font-style: normal;
