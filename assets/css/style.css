@@ -49,7 +49,7 @@
     text-transform: uppercase;
     color: #fff;
     font-size: 40px;
-    font-family: "BartinaBold";
+    font-family: "Bartina-Light";
 }
 .site-header-top{
     display: flex;
@@ -70,7 +70,7 @@
     backdrop-filter: blur(4px);
     position: absolute;
     right: -55px;
-    top: 343px;
+    top: 337px;
     z-index: 2;
 }
 .site-header-contacts{
@@ -86,16 +86,16 @@
 }
 .site-header-bg{
     width: 100%;
-    background: url("../../assets/img/banner.jpg") no-repeat;
+    background: url("../../assets/img/1.jpg") no-repeat;
     min-height: inherit;
     position: absolute;
     z-index: 0;
     background-size: cover;
 }
 .site-header-description{
-    max-width: 1090px;
-    height: 550px;
-    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
     position: relative;
     z-index: 1;
     width: 100%;
@@ -103,8 +103,35 @@
     position: absolute;
     bottom: 0;
     display: flex;
-    align-items: end;
 }
+
+.description-action::before{
+    width: 300px;
+    height: inherit;
+    content: "";
+    background: #002D4D;
+    position: absolute;
+    left: -300px;
+    z-index: 1;
+}
+
+.description-action{
+    color: #FFF;
+    font-family: "BartinaBold";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 108.5%; /* 37.975px */
+    text-transform: uppercase;
+    border-radius: 0 12px 12px 0;
+    background: #002D4D;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 21px;
+}
+
 .site-header-contacts{
     height: 50px;
 }
@@ -203,4 +230,23 @@
     background-color: #002D4D;
     min-height: 129px;
     border-top: 2px solid #fff;
+}
+.description__title{
+    color: #002D4D;
+    font-family: "BartinaBold";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.description__slogan{
+    color: #002D4D;
+    font-family: "Bartina-Light";
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 108.5%;
+    text-transform: uppercase;
+    max-width: 473px;
 }
