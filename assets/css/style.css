@@ -16,7 +16,7 @@
 		url('../fonts/bartina-light.ttf') format('truetype'), /* Safari, Android, iOS */
 		url('../fonts/bartina-light.svg#bartina-light') format('svg'); /* Chrome < 4, Legacy iOS */
 }
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -181,8 +181,9 @@
     text-transform: uppercase;
 }
 .product-bg{
-    background: url("../../assets/img/aboutProductBG.png") no-repeat;
+    background: url("../../assets/img/aboutProductBG.jpg") no-repeat;
     background-size: cover;
+    clip-path: ellipse(48% 30% at 51% 30%);;
     width: 100%;
     height: 200px;
 }
