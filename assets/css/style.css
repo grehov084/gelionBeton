@@ -26,7 +26,7 @@
   }
 .container{
     width: 100%;
-    max-width: 1440px;
+    max-width: 1583px;
     margin: 0 auto;
     min-height: inherit;
     z-index: 1;
@@ -62,15 +62,15 @@
 }
 .site-header-blur{
     width: 100%;
-    max-width: 870px;
+    max-width: 824px;
     height: 658px;
     border-radius: 35px;
     border: 7px solid #002D4D;
     background: rgba(11, 28, 41, 0.32);
     backdrop-filter: blur(4px);
     position: absolute;
-    right: -55px;
-    top: 337px;
+    right: -30px;
+    top: 122px;
     z-index: 2;
 }
 .site-header-contacts{
@@ -80,10 +80,9 @@
     align-items: center;
 }
 .site-header-content{
-
     position: relative;
     overflow: hidden;
-    min-height: 1000px;
+    min-height: 780px;
 }
 .site-header-bg{
     width: 100%;
@@ -92,11 +91,12 @@
     position: absolute;
     z-index: 0;
     background-size: cover;
+    background-position-x: right;
 }
 .site-header-description{
     display: flex;
     flex-direction: column;
-    max-width: 800px;
+    max-width: 500px;
     position: relative;
     z-index: 1;
     width: 100%;
@@ -152,7 +152,6 @@
 .site-main__product{
     font-family: "BertinaNormal";
     width: 100%;
-    max-width: 1440px; 
     min-height: 450px;
     margin-top: 40px;
     background-color: #002D4D;
@@ -289,7 +288,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 24px 11px;
+    margin: 24px 0 0;
 }
 .header-mobile__button{
     width: 100%;
@@ -317,12 +316,110 @@
     font-weight: 300;
     line-height: 108.5%; /* 21.7px */
     text-transform: uppercase;
+    margin: 11px 0;
+}
+.header-mobile-bottom{
+    background: url("../../assets/img/banner.jpg") no-repeat;
+    background-position-x: right;
+    width: 100%;
+    min-height: 726px;
+    border-bottom: 3px solid #002D4D;
+}
+.description__elem{
+    width: 100%;
+    max-width: 555px;
+    min-height: 117px;
+    border-radius: 35px;
+    border: 3px solid #002D4D;
+    backdrop-filter: blur(4px);
+    margin-top: 11px;
+}
+.header-mobile-number__link{
+    color: #002D4D;
+    text-align: center;
+    font-family: "Bartina-Light";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 108.5%; /* 16.275px */
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.header-mobile-number{
+    position: absolute;
+    top: 35px;
+    right: 50px;
+}
+@media(min-width: 1990px){
+    .site-header-blur{
+        max-width: 41.3%;
+        right: -30px;
+        top: 126px;
+    }
+    .container{
+        width: 1920px;
+    }
+    .site-header-bg{
+        background-size: cover;
+        background-position-x: center;
+    }
+}
+@media(min-width: 2140px){
+    .site-header-content{
+        min-height: 900px;
+    }
+    .site-header-blur{
+        max-width: 41.3%;
+        right: -52px;
+        top: 242px;
+    }
+}
+@media(min-width: 2200px){
+    .site-header-blur{
+        max-width: 41.8%;
+        right: -52px;
+        top: 242px;
+    }
+}
+@media(max-width: 1700px){
+    
 }
 @media(max-width: 768px){
+    .site{
+        background: url("../img/mobileBG.jpg");
+    }
     .site-header-mobile{
         display: flex;
     }
     .site-header-content{
         display: none;
+    }
+    .site-main-title{
+        text-align: center;
+        margin: 30px 0;
+    }
+    .site-main__product{
+        max-width: unset;
+        width: 97%;
+        margin: 0 10px 30px 10px;
+        border-radius: 10px;
+    }
+    .site-main__content{
+        margin: unset;
+    }
+    .about__title{
+        text-align: center;
+    }
+    .site-main-contacts-map{
+        position: relative;
+        top: 0;
+        max-width: unset;
+    }
+    .map__title, .contacts-info__title{
+        text-align: center;
+    }
+    .contacts-info{
+        width: 100%;
+        min-height: 241px;
     }
 }
