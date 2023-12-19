@@ -364,6 +364,72 @@
     top: 35px;
     right: 50px;
 }
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-dialog{
+    width: 100%;
+    max-width: 430px;
+    background: #fff;
+    padding: 25px;
+}
+.modal__title, .modal__close{
+    display: inline-block;
+}
+.modal__close{
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: "Bartina-Light";
+    font-size: 25px;
+}
+.modal__title{
+    font-family: "Bartina-Light";
+    color: #002D4D;
+    font-size: 28px;
+}
+.modal-top{
+    display: flex;
+    justify-content: space-between;
+}
+.modal__title{
+    width: 100%;
+    text-align: center;
+}
+.modal-input{
+    display: flex;
+    flex-direction: column;
+}
+.modal-action{
+    display: flex;
+    justify-content: center;
+}
+.modal-input__elem{
+    height: 50px;
+    margin: 15px 0;
+    padding: 10px;
+}
+.modal__button{
+    width: 100%;
+    max-width: 250px;
+    height: 45px;
+    background-color: #002D4D;
+    color: #FFF;
+    border: none;
+    font-family: "Bartina-Light";
+    cursor: pointer;
+    font-size: 24px;
+    transition: 0.5s;
+}
 @media(min-width: 1990px){
     .site-header-blur{
         max-width: 41.3%;
@@ -535,5 +601,13 @@
 @media(max-width: 400px){
     .header-mobile-number{
         right: 10px;
+    }
+}
+@media screen {
+    .modal__close:hover{
+        color: red
+    }
+    .modal__button:hover{
+        background-color: #02233b;
     }
 }

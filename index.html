@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Гелион бетон</title>
 </head>
 <body>
@@ -11,10 +12,8 @@
         <header class="site-header">
             <div class="site-header-content">
                 <div class="site-header-bg">
-
                 </div>
                 <div class="site-header-blur">
-
                 </div>
                 <div class="container">
                     <div class="site-header-top">
@@ -134,6 +133,25 @@
 
             </div>
         </footer>
+        <div class="modal">
+            <div class="modal-dialog">
+                <div class="modal-top">
+                    <div class="modal__title">
+                        Заказать обратный звонок
+                    </div>
+                    <div class="modal__close">
+                        x
+                    </div>
+                </div>
+                <div class="modal-input">
+                    <input type="text" class="modal-input__elem" name="name" placeholder="ФИО">
+                    <input type="tel" class="modal-input__elem" name="tel" placeholder="Телефон" id="">
+                </div>
+                <div class="modal-action">
+                    <input type="submit" value="Отправить" class="modal__button">
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
