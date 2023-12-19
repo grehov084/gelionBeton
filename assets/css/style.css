@@ -111,8 +111,8 @@
     content: "";
     background: #002D4D;
     position: absolute;
-    left: -300px;
-    z-index: 1;
+    left: -299px;
+    z-index: -2;
 }
 .description-action{
     color: #FFF;
@@ -136,9 +136,11 @@
 }
 .site-main-content{
     width: 100%;
+    background: url("../img/aboutProductBG2.jpg");
+    background-size: cover;
 }
 .site-main__content{
-    margin: 100px 0 50px 0;
+    padding: 100px 0 50px 0;
 }
 .site-main-title{
     color: #002D4D;
@@ -169,7 +171,8 @@
 } 
 .product-container{
     position: relative;
-    padding-left: 100px;    
+    padding-left: 52px;  
+    top: -60px;  
 }
 .product__description{
     color: #FFF;
@@ -181,17 +184,10 @@
     text-transform: uppercase;
 }
 .product-bg{
-    background: url("../../assets/img/aboutProductBG.jpg") no-repeat;
+    background: url("../../assets/img/aboutProductBG.png") no-repeat;
     background-size: cover;
     width: 100%;
-    height: 235px;
-    transform: rotate(-4deg);
-}
-.clip{
-    width: 109%;
-    height: inherit;
-    clip-path: ellipse(55% 72% at 51% 27%);
-    transform: rotate(4deg);
+    height: 245px;
 }
 .site-main-about{
     min-height: 424px;
@@ -321,18 +317,36 @@
 .header-mobile-bottom{
     background: url("../../assets/img/banner.jpg") no-repeat;
     background-position-x: right;
+    background-size: cover;
     width: 100%;
-    min-height: 726px;
+    min-height: 381px;
     border-bottom: 3px solid #002D4D;
 }
 .description__elem{
     width: 100%;
-    max-width: 555px;
+    max-width: 300px;
     min-height: 117px;
     border-radius: 35px;
     border: 3px solid #002D4D;
     backdrop-filter: blur(4px);
     margin-top: 11px;
+    position: relative;
+    left: -30px;
+}
+.header-mobile-descrption{
+    overflow: hidden;
+}
+.description__elem--right{
+    position: absolute;
+    top: 393px;
+    right: 0;
+    border-radius: 35px 0 0 28px;
+    left: unset;
+    border-right: none;
+}
+.description__elem--bottom{
+    position: absolute;
+    bottom: 0;
 }
 .header-mobile-number__link{
     color: #002D4D;
@@ -387,10 +401,99 @@
         top: 242px;
     }
 }
-@media(max-width: 1700px){
-
+@media(max-width: 1650px){
+    .container{
+        max-width: 1383px;
+    }
+    .description__title{
+        font-size: 68px;
+    }
+    .description__slogan{
+        font-size: 25px;
+    }
 }
-@media(max-width: 768px){
+@media(max-width: 1470px){
+    .container{
+        max-width: 1240px;
+    }
+    .description__title{
+        font-size: 65px;
+    }
+    .description__slogan{
+        font-size: 23px;
+    }
+    .site-header-description{
+        max-width: 455px;
+    }
+}
+@media(max-width:1300px){
+    .site-header-content{
+        min-height: 690px;
+    }
+    .site-header-blur{
+        max-width: 733px;
+        height: 568px
+    }
+}
+@media(max-width: 1270px){
+    .container{
+        max-width: 1130px;
+    }
+    .description__title{
+        font-size: 56px;
+    }
+    .description__slogan {
+        font-size: 20px;
+    }
+}
+@media(max-width: 1220px){
+    .site-header-content{
+        min-height: 660px;
+    }
+    .site-header-blur{
+        max-width: 702px;
+        height: 539px;
+    }
+    .description__title{
+        font-size: 53px;
+    }
+}
+@media(max-width: 1190px){
+    .description__title{
+        font-size: 48px;
+    }
+}
+@media(max-width: 1160px){
+    .container{
+        max-width: 1030px;
+    }
+    .site-header-description{
+        max-width: 330px;
+    }
+    .description__title{
+        font-size: 40px;
+    }
+    .description__slogan{
+        font-size: 19px;
+    }
+}
+@media(max-width: 1115px){
+    .description__title{
+        font-size: 36px;
+    }
+    .description__slogan{
+        font-size: 17px;
+    }
+}
+@media(max-width: 1080px){
+    .container{
+        max-width: 995px;
+    }
+    .description__title{
+        font-size: 34px;
+    }
+}
+@media(max-width: 1024px){
     .site{
         background: url("../img/mobileBG.jpg");
     }
@@ -427,5 +530,10 @@
     .contacts-info{
         width: 100%;
         min-height: 241px;
+    }
+}
+@media(max-width: 400px){
+    .header-mobile-number{
+        right: 10px;
     }
 }
