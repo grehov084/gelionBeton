@@ -1,8 +1,11 @@
-let body, showModal, closeModal, modalOverlay, modalElem, goUp, scrollValue = 0;
+let body, showModal, closeModal, modalOverlay, modalElem, goUp, tel, scrollValue = 0;
 closeModal = document.querySelector(".modal__close");
 modalOverlay = document.querySelector(".modal");
 body = document.querySelector('body');
 goUp = document.querySelector(".site__up");
+jQuery(function($){
+    $("#tel").mask("+7 (999) 999-9999", {placeholder: "X"});
+});
 if(window.innerWidth > 1024){
     showModal = document.querySelector(".description-action");
 }
@@ -17,9 +20,7 @@ window.addEventListener("resize", ()=>{
     else{
         showModal = document.querySelector(".header-mobile__button");
     }
-    console.log(showModal);
 });
-console.log(showModal);
 function fadeIn(el, timeout, display){
     el.style.opacity = 0;
     el.style.display = display || 'flex';
