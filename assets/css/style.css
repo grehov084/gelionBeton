@@ -80,6 +80,7 @@
     align-items: center;
 }
 .site-header-content{
+
     position: relative;
     overflow: hidden;
     min-height: 1000px;
@@ -260,4 +261,68 @@
     line-height: 108.5%;
     text-transform: uppercase;
     max-width: 473px;
+}
+.site-header-mobile{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.header-mobile__title{
+    text-align: center;
+    text-transform: uppercase;
+}
+.header-mobile__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 100%;
+    background: #002D4D;
+    height: 38px;
+    color: #fff;
+    font-family: "BartinaBold";
+    font-weight: 600;
+}
+.header-mobile-middle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 24px 11px;
+}
+.header-mobile__button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header-mobile__title{
+    color: #002D4D;
+    text-align: center;
+    font-family: "BartinaBold";
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.header-mobile__slogan{
+    width: 100%;
+    max-width: 278px;
+    color: #002D4D;
+    text-align: center;
+    font-family: "Bartina-Light";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 108.5%; /* 21.7px */
+    text-transform: uppercase;
+}
+@media(max-width: 768px){
+    .site-header-mobile{
+        display: flex;
+    }
+    .site-header-content{
+        display: none;
+    }
 }
