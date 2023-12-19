@@ -376,6 +376,9 @@
     justify-content: center;
     align-items: center;
 }
+.show{
+    display: flex;
+}
 .modal-dialog{
     width: 100%;
     max-width: 430px;
