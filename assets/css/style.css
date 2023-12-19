@@ -363,6 +363,12 @@
         background-size: cover;
         background-position-x: center;
     }
+    .description-action::before{
+        width: 100%;
+        position: absolute;
+        left: -99%;
+        z-index: -1;
+    }
 }
 @media(min-width: 2140px){
     .site-header-content{
@@ -382,7 +388,7 @@
     }
 }
 @media(max-width: 1700px){
-    
+
 }
 @media(max-width: 768px){
     .site{
