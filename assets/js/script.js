@@ -1,8 +1,9 @@
-let body, showModal, closeModal, modalOverlay, modalElem, goUp, tel, scrollValue = 0;
+let body, showModal, closeModal, modalOverlay, modalElem, goUp, tel, scrollValue = 0, header;
 closeModal = document.querySelector(".modal__close");
 modalOverlay = document.querySelector(".modal");
 body = document.querySelector('body');
 goUp = document.querySelector(".site__up");
+header = document.querySelector(".site-header__logo");
 jQuery(function($){
     $("#tel").mask("+7 (999) 999-9999", {placeholder: "X"});
 });
@@ -64,4 +65,22 @@ closeModal.addEventListener("click", ()=>{
     fadeOut(modalElem, 500);
     modalElem.classList.remove("show");
     body.removeAttribute("style");
+});
+document.addEventListener("keydown", function(e){
+    if(e.key == "Escape"){
+        modalElem = document.querySelector(".modal");
+        fadeOut(modalElem, 500);
+        modalElem.classList.remove("show");
+        body.removeAttribute("style");
+    }
+});
+document.addEventListener("click", function(e){
+    if(e.target.tagName == "svg"){
+        e.preventDefault;
+        window.scrollTo(header);
+    }
+    else if(e.target.tagName == "path"){
+        e.preventDefault;
+        window.scrollTo(header);
+    }
 });
