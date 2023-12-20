@@ -4,9 +4,11 @@ modalOverlay = document.querySelector(".modal");
 body = document.querySelector('body');
 goUp = document.querySelector(".site__up");
 header = document.querySelector(".site-header__logo");
+
 jQuery(function($){
     $("#tel").mask("+7 (999) 999-9999", {placeholder: "X"});
 });
+console.log(header);
 if(window.innerWidth > 1024){
     showModal = document.querySelector(".description-action");
 }
@@ -50,6 +52,10 @@ window.addEventListener("scroll", ()=>{
         fadeOut(goUp, 500);
         goUp.removeAttribute("style");
     }
+});
+goUp.addEventListener("click", ()=>{
+    header.scrollIntoView();
+    console.log(header);
 });
 if(scrollValue != 0){
     modalOverlay.style.top = scrollValue + "px";
