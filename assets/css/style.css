@@ -496,6 +496,14 @@
     display: flex;
     align-items: center;
 }
+.site-footer-copy{
+    position: relative;
+    top: 90px;
+    width: max-content;
+    font-family: "Bartina-Light";
+    color: #fff;
+    font-size: 23px;
+}
 @media(min-width: 1990px){
     .site-header-blur{
         max-width: 41.3%;

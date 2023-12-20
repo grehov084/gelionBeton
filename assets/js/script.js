@@ -1,9 +1,22 @@
-let body, showModal, closeModal, modalOverlay, modalElem, goUp, tel, scrollValue = 0, header;
+let body, showModal, closeModal, modalOverlay, modalElem, goUp, tel, scrollValue = 0, header, i = 0;
 closeModal = document.querySelector(".modal__close");
 modalOverlay = document.querySelector(".modal");
 body = document.querySelector('body');
 goUp = document.querySelector(".site__up");
 header = document.querySelector(".site-header__logo");
+
+function scroll(){
+    window.scrollTo({
+        top: 0
+    });
+}
+scroll();
+goUp.addEventListener("click", function(e){
+    //e.preventDefault();
+    scroll();
+    console.log(i);
+    i++;
+});
 
 jQuery(function($){
     $("#tel").mask("+7 (999) 999-9999", {placeholder: "X"});
@@ -16,7 +29,6 @@ else{
     showModal = document.querySelector(".header-mobile__button");
 }
 window.addEventListener("resize", ()=>{
-    console.log(window.innerWidth);
     if(window.innerWidth > 1024){
         showModal = document.querySelector(".description-action");
     }
@@ -53,10 +65,7 @@ window.addEventListener("scroll", ()=>{
         goUp.removeAttribute("style");
     }
 });
-goUp.addEventListener("click", ()=>{
-    header.scrollIntoView();
-    console.log(header);
-});
+
 if(scrollValue != 0){
     modalOverlay.style.top = scrollValue + "px";
 }
