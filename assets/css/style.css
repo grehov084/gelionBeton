@@ -198,7 +198,7 @@
     min-height: inherit;
     background-size: cover;
 }
-.about__title, .contacts-info__title, .map__title{
+.about__title, .contacts-info__title{
     font-family: "BartinaBold";
     color: #FFF;
     font-size: 60px;
@@ -208,15 +208,7 @@
     text-transform: uppercase;
     padding-top: 50px;
 }
-.map__title{
-    padding-left: 29px;
-}
-.map__title--color{
-    color: #000;
-}
-.map__title--padding{
-    padding-top: 26px;
-}
+
 .site-main-contacts{
     background-color: #002D4D;
     min-height: 376px;
@@ -667,7 +659,7 @@
         top: 0;
         max-width: unset;
     }
-    .map__title, .contacts-info__title{
+    .contacts-info__title{
         text-align: center;
     }
     .contacts-info{
