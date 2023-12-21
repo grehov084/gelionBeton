@@ -431,7 +431,7 @@
     font-size: 24px;
     transition: 0.5s;
 }
-.site__up{
+.site-up{
     width: 75px;
     height: 75px;
     border-radius: 60px;
@@ -551,7 +551,7 @@
     .description__slogan{
         font-size: 25px;
     }
-    .site__up{
+    .site-up{
         right: 25px;
     }
 }
@@ -721,7 +721,7 @@
         color: red
     }
     .modal__button:hover,
-    .site__up:hover{
+    .site-up:hover{
         background-color: #02233b;
     }
 }

@@ -1,27 +1,13 @@
-let body, showModal, closeModal, modalOverlay, modalElem, goUp, tel, scrollValue = 0, header, i = 0;
+let body, showModal, closeModal, modalOverlay, modalElem, goUp, tel, scrollValue = 0, header, el;
 closeModal = document.querySelector(".modal__close");
 modalOverlay = document.querySelector(".modal");
 body = document.querySelector('body');
-goUp = document.querySelector(".site__up");
+goUp = document.querySelector(".site-up__link");
 header = document.querySelector(".site-header__logo");
-
-function scroll(){
-    window.scrollTo({
-        top: 0
-    });
-}
-scroll();
-goUp.addEventListener("click", function(e){
-    //e.preventDefault();
-    scroll();
-    console.log(i);
-    i++;
-});
-
+el = document.getElementById(goUp.getAttribute("data-link"));
 jQuery(function($){
     $("#tel").mask("+7 (999) 999-9999", {placeholder: "X"});
 });
-console.log(header);
 if(window.innerWidth > 1024){
     showModal = document.querySelector(".description-action");
 }
@@ -35,6 +21,12 @@ window.addEventListener("resize", ()=>{
     else{
         showModal = document.querySelector(".header-mobile__button");
     }
+});
+goUp.addEventListener("click", () => {
+    el.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 });
 function fadeIn(el, timeout, display){
     el.style.opacity = 0;
@@ -57,15 +49,14 @@ function fadeOut(el, timeout){
 };
 window.addEventListener("scroll", ()=>{
     modalOverlay.style.top = window.pageYOffset + "px";
-    if(window.pageYOffset != 0 && !goUp.hasAttribute("style")){
-        fadeIn(goUp, 250);
+    if(window.pageYOffset != 0 && !goUp.parentNode.hasAttribute("style")){
+        fadeIn(goUp.parentNode, 250);
     }
     if(window.pageYOffset == 0){
-        fadeOut(goUp, 500);
-        goUp.removeAttribute("style");
+        fadeOut(goUp.parentNode, 500);
+        goUp.parentNode.removeAttribute("style");
     }
 });
-
 if(scrollValue != 0){
     modalOverlay.style.top = scrollValue + "px";
 }
@@ -87,15 +78,5 @@ document.addEventListener("keydown", function(e){
         fadeOut(modalElem, 500);
         modalElem.classList.remove("show");
         body.removeAttribute("style");
-    }
-});
-document.addEventListener("click", function(e){
-    if(e.target.tagName == "svg"){
-        e.preventDefault;
-        window.scrollTo(header);
-    }
-    else if(e.target.tagName == "path"){
-        e.preventDefault;
-        window.scrollTo(header);
     }
 });
